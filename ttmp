@@ -1,0 +1,16 @@
+INSERT INTO
+users (
+email,
+encrypted_password,
+report erratum • discuss
+Prevent Bad Data Using Check Constraints • 29
+Prepared exclusively for Charles Gaines
+created_at,
+updated_at
+)
+VALUES (
+'foo@example.com',
+'$abcd',
+now(),
+now()
+);:

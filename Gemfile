@@ -15,6 +15,7 @@ gem 'puma', '~> 3.0'
 
 gem 'devise'
 gem 'bower-rails'
+gem 'faker'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
