@@ -18,15 +18,18 @@
   <header>
     <h1 class="h3">Results</h1>
   </header>
-  <ol class="list-group clearfix">
+  <ol class="list-group">
     <% @customers.each do |customer| %>
-      <li class="list-group-item ">
-        <h3 class="pull-right">
-          Joined <%= l customer.created_at.to_date %>
-        </h3>
-        <h2><%= customer.first_name %> <%= customer.last_name %></h2>
-        <h4><%= customer.email %></h4>
-        <h5><%= customer.username %></h5>
+      <li class="list-group-item clearfix">
+       <h3 class="pull-right">
+         <small class="text-uppercase">Joined</small>
+         <%= l customer.created_at.to_date %>
+       </h3>
+       <h2 class="h3">
+         <%= customer.first_name %> <%= customer.last_name %>
+         <small><%= customer.username %></small>
+       </h2>
+       <h4><%= customer.email %></h4>
       </li>
     <% end %>
   </ol>
