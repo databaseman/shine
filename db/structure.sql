@@ -172,6 +172,27 @@ ALTER TABLE ONLY users
 
 
 --
+-- Name: customers_lower_email; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX customers_lower_email ON customers USING btree (lower((email)::text));
+
+
+--
+-- Name: customers_lower_first_name; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX customers_lower_first_name ON customers USING btree (lower((first_name)::text) varchar_pattern_ops);
+
+
+--
+-- Name: customers_lower_last_name; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX customers_lower_last_name ON customers USING btree (lower((last_name)::text) varchar_pattern_ops);
+
+
+--
 -- Name: index_customers_on_email; Type: INDEX; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -208,6 +229,7 @@ SET search_path TO "$user",public;
 INSERT INTO schema_migrations (version) VALUES
 ('20170213223524'),
 ('20170221173308'),
-('20170221181738');
+('20170221181738'),
+('20170221230357');
 
 
