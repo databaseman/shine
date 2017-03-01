@@ -13,6 +13,7 @@ gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
+gem 'pry-rails'
 gem 'devise'
 gem 'bower-rails'
 gem 'faker'
